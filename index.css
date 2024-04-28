@@ -1,0 +1,107 @@
+/* h2,
+h3,
+body {
+  color: #e65696;
+  text-align: center;
+  font-family: "Great Notes", sans-serif;
+}
+h3 {
+  text-decoration: underline;
+}
+body {
+  background-image: linear-gradient(to bottom right, #d2c6f3, #f3e6e9);
+}
+
+.button1 {
+  background-color: #e65696;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px; 
+  font-family: "Great Notes", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+.button1:hover {
+  background-color: #ff85b2; /
+} */
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-image: linear-gradient(to bottom right, #f8f9fa, #dee2e6);
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Button Styles */
+.button1 {
+  display: block;
+  margin: 0 auto;
+  background-color: #e65696;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button1:hover {
+  background-color: #ff85b2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Category Styles */
+.category {
+  margin-top: 30px;
+}
+
+.category h4 {
+  color: #e65696;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category ul li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
