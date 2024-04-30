@@ -1,49 +1,63 @@
-const API = "https://zenquotes.io/api/random";
+// const API = "https://zenquotes.io/api/random";
 
-fetch(API)
-  .then((res) => res.json())
-  .then((data) => displayAffirmation(data));
-console.log(data);
-function displayAffirmation(data) {
-  const h1Element = document.querySelector("h1");
-  h1Element.textContent = `Affirmation of the day: ${data.q} by ${data.a}`;
-}
+// fetch(API)
+//   .then((res) => res.json())
+//   .then((data) => displayAffirmation(data));
+// console.log(data);
+// function displayAffirmation(data) {
+//   const h1Element = document.querySelector("h1");
+//   h1Element.textContent = `Affirmation of the day: ${data.q} by ${data.a}`;
+// }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("habitForm");
+  const workContainer = document.getElementById("Work");
+  const schoolContainer = document.getElementById("School");
+  const healthContainer = document.getElementById("Health and Nutrition");
+  const selfContainer = document.getElementById("Self Care");
+  const fitnessContainer = document.getElementById("Fitness");
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const habitForm = document.getElementById("addHabitForm");
-//   const habitList = document.getElementById("habitList");
+  // an event listener to capture the info, but we need to make sure we do not reload
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    getData();
+  });
 
-//   habitForm.addEventListener("submit", function (event) {
-//     event.preventDefault();
+  function getData(e) {
+    const habitName = form.elements["habitName"].value; // New way of capturing the input
+    const category = form.elements["habitCategory"].value;
+    const frequency = form.elements["Frequency"].value;
 
-//     const habitName = document.getElementById("habitName").value;
-//     const habitCategory = document.getElementById("habitCategory").value;
-//     const habitFrequency = document.getElementById("habitFrequency").value;
+    const habitsDiv = document.createElement("div"); // We create a div with the actual habit
+    const habitItem = document.createElement("span"); // Under the div, we create a span for the actual habit
+    const habitFrequency = document.createElement("span");
+    const edit = document.createElement("button");
+    const checkmark = document.createElement("button");
 
-//     const habitItem = document.createElement("div");
-//     habitItem.classList.add("habit-item");
-//     habitItem.innerHTML = `
-//             <span>${habitName} - ${habitFrequency}</span>
-//             <button class="complete-btn">Complete</button>
-//         `;
+    habitItem.textContent = habitName;
+    habitFrequency.textContent = frequency;
+    edit.textContent = "🖊️";
+    checkmark.textContent = "✔";
 
-//     habitItem
-//       .querySelector(".complete-btn")
-//       .addEventListener("click", function () {
-//         habitItem.remove();
-//       });
+    habitsDiv.appendChild(habitItem); // append the habits span to the upper div
+    habitsDiv.appendChild(habitFrequency);
+    habitsDiv.appendChild(edit);
+    habitsDiv.appendChild(checkmark);
+    // crearing the input fields
+    form.elements["habitName"].value = "";
+    form.elements["habitCategory"].value = "";
+    form.elements["Frequency"].value = "";
 
-//     let categoryDiv = habitList.querySelector(`#${habitCategory}`);
-//     if (!categoryDiv) {
-//       categoryDiv = document.createElement("div");
-//       categoryDiv.id = habitCategory;
-//       categoryDiv.classList.add("habit-category");
-//       categoryDiv.innerHTML = `<h3>${habitCategory}</h3>`;
-//       habitList.appendChild(categoryDiv);
-//     }
-//     categoryDiv.appendChild(habitItem);
-
-//     habitForm.reset();
-//   });
-// });
+    if (category === "Work") {
+      workContainer.appendChild(habitsDiv);
+    } else if (category === "School") {
+      schoolContainer.appendChild(habitsDiv);
+    } else if (category === "Health and Nutrition") {
+      healthContainer.appendChild(habitsDiv);
+    } else if (category === "Self Care") {
+      selfContainer.appendChild(habitsDiv);
+    } else if (category === "Fitness") {
+      fitnessContainer.appendChild(habitsDiv);
+    }
+  }
+});
