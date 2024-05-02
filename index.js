@@ -11,7 +11,7 @@ function displayAffirmation(data) {
   const randomIndex = Math.floor(Math.random() * data.length);
   const randomQuote = data[randomIndex];
   const affirmation = document.getElementById("affirmation");
-  affirmation.textContent = `Affirmation of the day: ${randomQuote.text} by ${randomQuote.author}`;
+  affirmation.textContent = `Affirmation of the day: 🚀 ${randomQuote.text} by ${randomQuote.author} 🚀`;
 }
 
 document.addEventListener("DOMContentLoaded", function () {

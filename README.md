@@ -11,7 +11,7 @@ Affirmations : Gives you daily affirmations every time you log in
 Getting Started
 To get started with the Habits Tracker, follow these steps:
 
-Clone the Repository: git clone https://github.com/your-username/habits-tracker.git
+Clone the Repository: git clone git@github.com:mercy12-boop/Phase-1-Project-Task-Turtle.git
 Install Dependencies: cd habits-tracker && npm install
 Start the Application: npm start
 That's it! You're now ready to start tracking your habits.
@@ -19,10 +19,9 @@ That's it! You're now ready to start tracking your habits.
 Usage
 Here's how to use the Habits Tracker:
 
-Add Habits: Click on the "+" button to add new habits to your tracker.
+Add Habits: Fill in the habit in the habits form, and click "Add habit to the habits tracker"
+Edit: Edit the habit, or frequency using the edit butoon next to each habit
 Track Progress: For each habit, click on the checkbox to mark it as completed for the day.
-View Insights: Navigate to the insights section to view your habit tracking history and visualize your progress over time.
-Set Reminders: Access the settings to customize reminders according to your preferences.
 Contributing
 Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
 
@@ -36,4 +35,4 @@ License
 This project is licensed under the MIT License.
 
 Contact
-If you have any questions or suggestions regarding the Habits Tracker, feel free to contact us at your-email@example.com.
+If you have any questions or suggestions regarding the Habits Tracker, feel free to contact me at wanjirumercy54@gmail.com.

@@ -1,36 +1,18 @@
-/* Reset default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* Body styles */
 body {
   font-family: "Roboto", sans-serif;
   background: linear-gradient(
     to bottom right,
-    #f8f9fa,
-    #dee2e6
-  ); /* Soft gradient background */
+    #cadbfc,
+    #feecf5
+  ); /* Gradient background */
   color: #333; /* Dark text color */
   line-height: 1.6;
 }
 
-/* Center the container */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff; /* White container background */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-}
-
 /* Header styles */
 header {
-  background-color: #6c757d;
-  padding: 20px;
+  background-color: #f9eafe; /* Light purple header background */
   text-align: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -41,7 +23,7 @@ header h1 {
   font-family: "Great Vibes", cursive;
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #fff;
+  color: #800080; /* Purple header text color */
 }
 
 /* Main styles */
@@ -49,52 +31,31 @@ main {
   padding: 20px;
 }
 
-/* Section styles */
-section {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-section h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #6c757d;
-}
-
-section p {
-  margin-bottom: 20px;
-}
-
 /* Form styles */
 form {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto; /* Center the form */
-  padding: 20px;
-  background-color: #f9f9f9; /* Light gray form background */
+  padding: 40px;
+  background-color: #ebbcfc; /* Light purple form background */
   border-radius: 10px;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #6c757d; /* Dark gray label color */
+/* Category styles */
+.category {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #800080; /* Purple text color */
+  background-color: #feecf5; /* Light pink category background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-input[type="text"],
-select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc; /* Light gray border */
-  border-radius: 5px;
-  background-color: #fff; /* White input background */
-  color: #333; /* Dark text color */
-}
-
+/* Button styles */
 button {
   padding: 10px 20px;
-  background-color: #6c757d; /* Dark gray button background */
+  background-color: #800080; /* Purple button background */
   color: #fff; /* White text color */
   border: none;
   border-radius: 5px;
@@ -103,55 +64,24 @@ button {
 }
 
 button:hover {
-  background-color: #495057; /* Darker gray on hover */
+  background-color: #660066; /* Darker purple on hover */
 }
 
 /* Habits container styles */
-.category {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: #6c757d;
-}
-
 .habitsD {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #f9f9f9;
+  background-color: #feecf5; /* Light pink habits container background */
   border-radius: 5px;
   margin-bottom: 10px;
-}
-
-.habitsD span {
-  flex: 1;
-}
-
-.habitsD button {
-  margin-left: 10px;
-  background-color: #6c757d;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.habitsD button:hover {
-  background-color: #495057;
-}
-
-.completed {
-  text-decoration: line-through;
-  color: #999;
 }
 
 /* Footer styles */
 footer {
   text-align: center;
-  background-color: #6c757d;
+  background-color: #f9eafe; /* Light purple footer background */
   padding: 10px 0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -160,5 +90,5 @@ footer {
 
 footer p {
   font-size: 0.8rem;
-  color: #fff;
+  color: #800080; /* Purple text color */
 }
