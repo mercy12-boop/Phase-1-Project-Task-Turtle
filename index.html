@@ -3,63 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Turtle</title>
-    <link rel="icon" type="image/x-icon" href="Images/cherry blossoms.png" />
+    <title>Task Turtle - Habit Tracker</title>
+    <link rel="icon" type="image/x-icon" href="Images/cherry_blossoms.png" />
     <link rel="stylesheet" href="index.css" />
     <link href="https://fonts.cdnfonts.com/css/great-notes" rel="stylesheet" />
   </head>
   <body>
-    <h1>Welcome to the habits tracker 💪:</h1>
-    <h2>⭐ Affirmation of the day: ⭐</h2>
-    <h3>Habits</h3>
-    <form id="habitForm">
-      <label for="habitName">Habit</label>
-      <input type="text" id="habitName" name="habitName" required /><br />
-      <!-- Defining the categories to track -->
-      <label for="habitCategory">Category</label>
-      <!-- To add the dropdown -->
-      <select name="habitCategory" id="habitCategory">
-        <option value="Work">Work</option>
-        <option value="School">School</option>
-        <option value="Health and Nutrition">Health and Nutrition</option>
-        <option value="Self Care">Self Care</option>
-        <option value="Fitness">Fitness</option>
-      </select>
-      <!-- Enclose the categories with the select to diplay all -->
+    <header>
+      <h1>Welcome to Task Turtle</h1>
+      <h2>Your personal habit tracker</h2>
+    </header>
 
-      <br />
-      <label for="Frequency">Frequency</label>
-      <select name="Frequency" id="Frequency">
-        <option value="Daily">Daily</option>
-        <option value="Weekly">Weekly</option>
-        <option value="Montly">Monthly</option>
-      </select>
-      <br />
-      <button id="button1" class="button1">Add habit to habits tracker!</button>
-    </form>
-    <br />
-    <br />
-    <h3>Habits by category</h3>
-    <div>
-      <h4 id="Work" class="category">Work</h4>
-      <ul></ul>
-    </div>
-    <div>
-      <h4 id="School" class="category">School</h4>
-      <ul></ul>
-    </div>
-    <div>
-      <h4 id="Health and Nutrition" class="category">Health and Nutrition</h4>
-      <ul></ul>
-    </div>
-    <div>
-      <h4 id="Self Care" class="category">Self Care</h4>
-      <ul></ul>
-    </div>
-    <div>
-      <h4 id="Fitness" class="category">Fitness</h4>
-      <ul></ul>
-    </div>
+    <main>
+      <section>
+        <h3 id="affirmation">Affirmation of the day:</h3>
+        <p>
+          Track your habits with the James Clear's Atomic Habits behavior
+          scorecard model. Take a step closer to breaking free from bad habits
+          by bringing them to your conscious mind every day. Categorize a
+          behavior within a specific state. Try not to judge yourself, simply
+          act as an observer.
+        </p>
+      </section>
+
+      <section>
+        <h2>Track Your Habits</h2>
+        <form id="habitForm">
+          <label for="habitName">Habit</label>
+          <input type="text" id="habitName" name="habitName" required /><br />
+
+          <label for="habitCategory">Category</label>
+          <select name="habitCategory" id="habitCategory">
+            <option value="Work">Work</option>
+            <option value="School">School</option>
+            <option value="Health and Nutrition">Health and Nutrition</option>
+            <option value="Self Care">Self Care</option>
+            <option value="Fitness">Fitness</option></select
+          ><br />
+
+          <label for="Frequency">Frequency</label>
+          <select name="Frequency" id="Frequency">
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option></select
+          ><br />
+
+          <button id="button1" class="button1">
+            Add habit to habits tracker!
+          </button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Habits by Category</h2>
+        <div>
+          <h3 id="Work" class="category">Work</h3>
+          <ul></ul>
+        </div>
+        <div>
+          <h3 id="School" class="category">School</h3>
+          <ul></ul>
+        </div>
+        <div>
+          <h3 id="Health and Nutrition" class="category">
+            Health and Nutrition
+          </h3>
+          <ul></ul>
+        </div>
+        <div>
+          <h3 id="Self Care" class="category">Self Care</h3>
+          <ul></ul>
+        </div>
+        <div>
+          <h3 id="Fitness" class="category">Fitness</h3>
+          <ul></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Task Turtle. All rights reserved.</p>
+    </footer>
 
     <script src="index.js" defer></script>
   </body>
