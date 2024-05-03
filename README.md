@@ -13,7 +13,7 @@ Affirmations : Gives you daily affirmations every time you log in
 Getting Started
 To get started with the Habits Tracker, follow these steps:
 
-Clone the Repository: git clone git@github.com:mercy12-boop/Phase-1-Project-Task-Turtle.git
+Clone the Repository: git@github.com:mercy12-boop/Phase-1-Project-Task-Turtle.git
 Install Dependencies: cd habits-tracker && npm install
 Start the Application: npm start
 That's it! You're now ready to start tracking your habits.
