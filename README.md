@@ -1,7 +1,7 @@
 Task Turtle
 Overview
 
-Images/Task Turtle Screenshot.PNG
+![alt text]('Images/Task Turtle Screenshot.PNG')
 
 Welcome to the Habits Tracker project! This is a simple yet powerful tool designed to help you track and manage your daily habits. Whether you're aiming to build new habits or break old ones, this tracker provides the functionality you need to stay organized and motivated.
 
