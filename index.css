@@ -1,94 +1,103 @@
-/* Body styles */
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
-  background: linear-gradient(
-    to bottom right,
-    #cadbfc,
-    #feecf5
-  ); /* Gradient background */
-  color: #333; /* Dark text color */
-  line-height: 1.6;
-}
-
-/* Header styles */
-header {
-  background-color: #f9eafe; /* Light purple header background */
-  text-align: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  margin-bottom: 20px;
-}
-
-header h1 {
   font-family: "Great Vibes", cursive;
+  line-height: 1.6;
+  background-color: #f8f9fa; /* Light gray */
+}
+
+header {
+  background-color: #d1afd3; /* Dark gray */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #800080; /* Purple header text color */
 }
 
-/* Main styles */
+h2 {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
 main {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-}
-
-/* Form styles */
-form {
-  max-width: 500px;
-  margin: 0 auto; /* Center the form */
-  padding: 40px;
-  background-color: #ebbcfc; /* Light purple form background */
+  background-color: #fff; /* White */
   border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
-/* Category styles */
-.category {
-  font-family: "Roboto", sans-serif;
+section {
+  margin-bottom: 40px;
+}
+
+p {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #800080; /* Purple text color */
-  background-color: #feecf5; /* Light pink category background */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-/* Button styles */
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da; /* Light gray */
+  border-radius: 5px;
+}
+
 button {
-  padding: 10px 20px;
-  background-color: #800080; /* Purple button background */
-  color: #fff; /* White text color */
+  background-color: #9f4298; /* Dark gray */
+  color: #fff;
   border: none;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-right: 10px;
 }
 
 button:hover {
-  background-color: #660066; /* Darker purple on hover */
+  background-color: #495057; /* Darker gray */
 }
 
-/* Habits container styles */
-.habitsD {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #feecf5; /* Light pink habits container background */
-  border-radius: 5px;
-  margin-bottom: 10px;
+h2.category {
+  margin-top: 30px;
 }
 
-/* Footer styles */
+ul {
+  list-style-type: none;
+}
+
 footer {
+  background-color: #d1afd3; /* Dark gray */
+  color: #fff;
+  padding: 10px 20px;
   text-align: center;
-  background-color: #f9eafe; /* Light purple footer background */
-  padding: 10px 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  margin-top: 20px;
 }
 
 footer p {
   font-size: 0.8rem;
-  color: #800080; /* Purple text color */
+}
+
+.habitsD span {
+  margin-right: 10px;
 }

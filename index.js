@@ -11,26 +11,49 @@ function displayAffirmation(data) {
   const randomIndex = Math.floor(Math.random() * data.length);
   const randomQuote = data[randomIndex];
   const affirmation = document.getElementById("affirmation");
+  affirmation.classList.add("affirmation");
   affirmation.textContent = `Affirmation of the day: 🚀 ${randomQuote.text} by ${randomQuote.author} 🚀`;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("habitForm");
   const workContainer = document.getElementById("Work");
   const schoolContainer = document.getElementById("School");
-  const healthContainer = document.getElementById("Health and Nutrition");
-  const selfContainer = document.getElementById("Self Care");
+  const healthContainer = document.getElementById("HealthandNutrition");
+  const selfContainer = document.getElementById("SelfCare");
   const fitnessContainer = document.getElementById("Fitness");
+
+  const dailys = document.getElementById("Daily");
+  const weeklys = document.getElementById("Weeklys");
+  const monthlys = document.getElementById("Monthlys");
 
   const completionCountsMap = new Map(); // Map to store completion counts
   const habitsArray = []; // Array to store habit elements
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    getData();
-  });
+  function updateProgress(habitDiv, frequency) {
+    const completionCount = completionCountsMap.get(habitDiv);
+    const frequencyLimit =
+      frequency === "Daily" ? 30 : frequency === "Weekly" ? 4 : 1;
+    const completionRate = completionCount / frequencyLimit;
+    const progressButton = document.createElement("button");
+    progressButton.textContent = `${
+      habitDiv.querySelector("span").textContent
+    } - ${completionRate}`;
 
-  function getData(e) {
+    if (frequency === "Daily") {
+      dailys.appendChild(progressButton);
+    } else if (frequency === "Weekly") {
+      weeklys.appendChild(progressButton);
+    } else if (frequency === "Monthly") {
+      monthlys.appendChild(progressButton);
+    }
+
+    progressButton.addEventListener("click", () => {
+      alert(`You have completed ${completionCount} times.`);
+    });
+  }
+
+  function getData() {
+    const form = document.getElementById("habitForm");
     const habitName = form.elements["habitName"].value;
     const category = form.elements["habitCategory"].value;
     const frequency = form.elements["Frequency"].value;
@@ -57,17 +80,22 @@ document.addEventListener("DOMContentLoaded", function () {
     form.elements["habitCategory"].value = "";
     form.elements["Frequency"].value = "";
 
+    // Get the category container element based on the category name
+    let categoryContainer;
     if (category === "Work") {
-      workContainer.appendChild(habitsDiv);
+      categoryContainer = workContainer;
     } else if (category === "School") {
-      schoolContainer.appendChild(habitsDiv);
+      categoryContainer = schoolContainer;
     } else if (category === "Health and Nutrition") {
-      healthContainer.appendChild(habitsDiv);
+      categoryContainer = healthContainer;
     } else if (category === "Self Care") {
-      selfContainer.appendChild(habitsDiv);
+      categoryContainer = selfContainer;
     } else if (category === "Fitness") {
-      fitnessContainer.appendChild(habitsDiv);
+      categoryContainer = fitnessContainer;
     }
+
+    // Append habit to corresponding category container
+    categoryContainer.appendChild(habitsDiv);
 
     // Push the habit div to the habits array
     habitsArray.push(habitsDiv);
@@ -97,7 +125,16 @@ document.addEventListener("DOMContentLoaded", function () {
         alert(
           `Woohoooo! You have completed : ${newCompletionCount} days of the ${habitName} habit`
         );
+
+        // Update progress bar
+        updateProgress(habitsDiv, frequency);
       }
     });
   }
+
+  const form = document.getElementById("habitForm");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    getData();
+  });
 });
