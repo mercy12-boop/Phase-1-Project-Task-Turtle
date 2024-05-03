@@ -1,7 +1,7 @@
 Task Turtle
 Overview
 
-![Task Turtle Screenshot](../Images/Task_Turtle_Screenshot.PNG)
+![Task Turtle Screenshot](https://github.com/mercy12-boop/Phase-1-Project-Task-Turtle/blob/main/Images/Task%20Turtle%20Screenshot.PNG)
 
 Welcome to the Habits Tracker project! This is a simple yet powerful tool designed to help you track and manage your daily habits. Whether you're aiming to build new habits or break old ones, this tracker provides the functionality you need to stay organized and motivated.
 
